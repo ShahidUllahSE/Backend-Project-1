@@ -5,7 +5,7 @@ import Logout from './components/Logout'
 import Register from './components/Register'
 import Products from './components/Products'
 import Product from './components/Product'
-// import Navbar from './components/Navbar'
+import Error from './components/Error'
 
 // import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar'
@@ -24,22 +24,28 @@ function App() {
     <Router>
 <Navbar bg="dark" varient='dark' className='mb-5'>
   <Container>
-<Nav classsName="me-auto">
+<Nav className="me-auto">
   
   
-      <Link classsName="nav-link" to="/home">Home</Link>
+      <Link className="nav-link mx-2" to="/home">Home</Link>
 
       
-      <Link classsName="nav-link" to="/products">Products</Link>
+      <Link className="nav-link mx-2" to="/about">About</Link>
 
       
-      <Link classsName="nav-link" to="/product">Product</Link>
+      <Link className="nav-link mx-2" to="/products">Products</Link>
 
       
-      <Link classsName="nav-link" to="/login">Login</Link>
+      <Link className="nav-link mx-2" to="/login">Login</Link>
 
       
-      <Link classsName="nav-link" to="/register">Register</Link>
+      <Link className="nav-link mx-2" to="/register">Register</Link>
+
+
+      <Link className="nav-link mx-2" to="/logout">Logout</Link>
+
+      
+
 
    
 </Nav>
@@ -63,6 +69,9 @@ function App() {
           <Route path='/products' element={<Products/>} ></Route>
 
           <Route path='/product/:id' element={<Product/>} ></Route>
+
+          <Route path='*' element={<Error/>} ></Route>
+
 
       </Routes>
 
