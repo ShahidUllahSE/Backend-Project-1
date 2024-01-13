@@ -10,6 +10,8 @@ const Register = () => {
 
 
 
+
+
   return (
     <section className="vh-100" style={{ backgroundColor: "#eee" }}>
       <div className="container h-100">
@@ -28,7 +30,16 @@ const Register = () => {
                         <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
                           <label className="form-label" htmlFor="formName">Your Name</label>
-                          <input type="text" id="formName" className="form-control" />
+                          <input 
+                          type="text"
+                           id="formName"
+                           className="form-control"
+                           onChange={(e) => setFullName(e.target.value)}
+                           value={fullName}
+                          
+                          
+                          
+                          />
                         </div>
                       </div>
 
@@ -36,7 +47,14 @@ const Register = () => {
                         <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
                           <label className="form-label" htmlFor="formEmail">Your Email</label>
-                          <input type="email" id="formEmail" className="form-control" />
+                          <input 
+                          type="email"
+                           id="formEmail"
+                            className="form-control" 
+                            onChange={(e) => setAddress(e.target.value)}
+                           value={setAddress}
+                            
+                            />
                         </div>
                       </div>
 
@@ -44,15 +62,25 @@ const Register = () => {
                         <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
                           <label className="form-label" htmlFor="formPassword">Password</label>
-                          <input type="password" id="formPassword" className="form-control" />
+                          <input
+                           type="password"
+                           id="formPassword"
+                           className="form-control"
+                           onChange={(e) => setPassword(e.target.value)}
+                           value={setPassword} />
                         </div>
                       </div>
 
                       <div className="d-flex flex-row align-items-center mb-4">
                         <i className="fas fa-key fa-lg me-3 fa-fw"></i>
                         <div className="form-outline flex-fill mb-0">
-                          <label className="form-label" htmlFor="formRepeatPassword">Repeat your password</label>
-                          <input type="password" id="formRepeatPassword" className="form-control" />
+                          <label className="form-label" htmlFor="formRepeatPassword"> Adress </label>
+                          <input type="password"
+                           id="formRepeatPassword"
+                           className="form-control"
+                           onChange={(e) => setAddress(e.target.value)}
+                           value={setAddress}
+                           />
                         </div>
                       </div>
 
