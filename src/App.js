@@ -16,12 +16,16 @@ import Nav from 'react-bootstrap/Nav'
 
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Container } from 'react-bootstrap';
+import { NotificationContainer } from 'react-notifications';
 
 
 function App() {
   return (
 
+    <div>
+    
     <Router>
+      <NotificationContainer/>
 <Navbar bg="dark" varient='dark' className='mb-5'>
   <Container>
 <Nav className="me-auto">
@@ -78,7 +82,7 @@ function App() {
       </div>
 
     </Router>
-
+    </div>
 
   );
 }
